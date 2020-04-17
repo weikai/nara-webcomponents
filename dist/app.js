@@ -2,4 +2,5 @@
 // your app / cdn / unbundled deployment
 // import "@lrnwebcomponents/video-player/video-player.js";
 
-import "elements/nara-branding-bar/index.js";
+import "../elements/nara-logo/index.js";
+import "../elements/nara-branding-bar/index.js";
