@@ -1,14 +1,14 @@
 {
-  "name": "unbundled-webcomponents",
+  "name": "nara-webcomponents",
   "version": "0.0.0",
-  "description": "a boilerplate",
+  "description": "NARA web components",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git@github.com/elmsln/unbundled-webcomponents.git"
+    "url": "git@github.com/weikai/nara-webcomponents.git"
   },
   "author": {
-    "name": "btopro"
+    "name": "Weikai Zhang"
   },
   "license": "Apache-2.0",
   "dependencies": {
@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build": "polymer build && yarn run terser && yarn run wc-autoloader",
-    "start": "yarn run build",
+    "start": "polymer serve -H $(hostname -i)",
     "terser": "gulp terser",
     "wc-autoloader": "gulp wc-autoloader"
   }
