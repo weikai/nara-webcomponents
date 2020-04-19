@@ -11,7 +11,10 @@
     "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
     "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js"
   ],
-  "sources": [],
+  "sources": [
+    "elements/*/src/**",
+    "elements/*/index.html"
+  ],
   "builds": [
     {
       "name": "es6",
