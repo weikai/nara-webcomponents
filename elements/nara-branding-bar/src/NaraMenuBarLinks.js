@@ -61,14 +61,14 @@ export class NaraMenuBarLinks extends LitElement {
       @media (min-width: 750px){
         .nara-links-grid{ 
           display: grid;
-          grid-template-columns: 20% 20% 30% 30%;
+          grid-template-columns: 20% 20% 30% 30%;          
         }
 
-        .nara-links-col:last-child ul{
+        .nara-links-col:last-child ul{          
+          padding-top:1.8rem;          
         }
       }
-      .nara-links-col{
-        
+      .nara-links-col{        
         overflow: hidden;
         font-weight: normal !important;
         width: 100%;
