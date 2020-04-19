@@ -3,6 +3,8 @@ const terser = require("gulp-terser");
 const glob = require("glob");
 const fs = require("fs");
 const path = require("path");
+const replace = require('gulp-replace');
+
 gulp.task(
   "terser", () => {
     // now work on all the other files
@@ -25,6 +27,15 @@ gulp.task(
       .pipe(gulp.dest('./build/es6-amd/'));
   }
 );
+
+gulp.task('updatelinks', async () => {
+  gulp.src('build/*/dist/build.html')
+    .pipe(replace('/components/nara-webcomponents/', '../'))
+    .pipe(gulp.dest('build/'));
+  }
+);
+
+
 
 gulp.task("wc-autoloader", async () => {
   glob(path.join("./build/es6/node_modules/**/*.js"), (er, files) => {

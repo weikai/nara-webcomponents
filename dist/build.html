@@ -12,7 +12,7 @@
       waitFor(cb){ addEventListener('WebComponentsReady', cb) }
     } 
     WebComponents.waitFor(async () => { 
-      import('../elements/nara-branding-bar/nara-elements.js');
+      import('../elements/nara-branding-bar/nara-branding-bar.js');
     });
   </script>  
   <script type="module" src="./app.js"></script>
@@ -22,5 +22,10 @@
 <body>
  
  <nara-menu-bar></nara-menu-bar>
+ <ul>
+   <li><a href='/components/nara-webcomponents/elements/nara-logo/'>NARA Logo</a></li>
+   <li><a href='/components/nara-webcomponents/elements/nara-branding-bar/'>NARA Brandng Bar</a></li>
+ </ul>
+ 
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "entrypoint": "dist/build.html",
+  "entrypoint": "dist/build.html",    
   "extraDependencies": [
     "node_modules/fetch-ie8/fetch.js",
     "node_modules/promise-polyfill/dist/polyfill.min.js",
@@ -17,7 +17,7 @@
       "name": "es6",
       "browserCapabilities": ["es2017", "modules"],
       "js": {
-        "minify": false,
+        "minify": true,
         "transformImportMeta": true
       },
       "css": {
@@ -34,7 +34,7 @@
         "es2015"
       ],
       "js": {
-        "minify": false,
+        "minify": true,
         "transformModulesToAmd": true,
         "transformImportMeta": true
       },
@@ -58,7 +58,7 @@
         "minify": true
       },
       "html": {
-        "minify": true
+        "minify": false
       },
       "bundle": false
     }
