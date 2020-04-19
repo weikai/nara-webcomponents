@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>NARA Web Components</title>  
+  <!-- Load polyfills -->
+  <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"  defer></script> 
+  <script src="../../node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || { 
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    } 
+    WebComponents.waitFor(async () => { 
+      import('./nara-branding-bar.js');
+    });
+  </script>    
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+</head>
+<body> 
+ <nara-menu-bar></nara-menu-bar>
+ 
+ <p><a href='../../dist/build.html'>Back to main page</a</p>
+</body>
+</html>
