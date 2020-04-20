@@ -107,11 +107,11 @@ export class NaraLogo extends LitElement {
           case 'stack':
           case 'horizontal':
           case 'eagle':                        
-            this.__logo = `${webchref}/nara-logo-${this[propName]}.svg`;
+            this.__logo = `${webchref}nara-logo-${this[propName]}.svg`;
             break;
           // this way if someone screws it up it still does something
           default:            
-            this.__logo = `${webchref}/nara-logo-stack.svg`;
+            this.__logo = `${webchref}nara-logo-stack.svg`;
             break;
         }
       }

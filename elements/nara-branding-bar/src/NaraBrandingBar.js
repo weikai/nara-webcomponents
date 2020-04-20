@@ -13,7 +13,7 @@ export class NaraBrandingBar extends LitElement {
         padding: 0px;
         color: var(--nara-branding-bar-text-color);
       }
-      button {
+      a.naramenubtn {
         display: inline-block;
         text-decoration: none;
         font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
@@ -29,8 +29,12 @@ export class NaraBrandingBar extends LitElement {
         padding: 5px 5px !important;
         margin: 7px 0px !important;
         line-height: 1em !important;
-        vertical-align: top;
+        vertical-align: top;        
       }
+      a.naramenubtn:focus{
+        outline:2px solid #A5C7FE;
+      }
+
       nara-logo {
         --nara-logo-width: 230px;
         --nara-logo-height: 30px;
@@ -99,7 +103,7 @@ export class NaraBrandingBar extends LitElement {
   render() {        
     return html`
       <nara-logo format="horizontal"></nara-logo>
-      <button @click="${this.clickEvent}" class="collapsible-mxg" controls="smt1">${this.exploreText}</button>
+      <a href='#' @click="${this.clickEvent}" class="collapsible-mxg naramenubtn" controls="smt1">${this.exploreText}</a>
       <simple-modal-template id="smt1">
         <slot slot="content"></slot>
       </simple-modal-template>
