@@ -38,13 +38,13 @@ gulp.task('updatelinks', async () => {
 
 
 gulp.task("wc-autoloader", async () => {
-  glob(path.join("./build/es6/node_modules/**/*.js"), (er, files) => {
+  glob("./build/es6/+(elements|node_modules)/**/*.js", (er, files) => {
     let elements = {};
     // async loop over files
     files.forEach((file) => {
       // grab the name of the file
       if (fs.existsSync(file)) {
-        let fLocation = file.replace("build/es6/node_modules/", "");
+        let fLocation = file.replace("build/es6/node_modules/", "").replace(/.*build\/es6\/elements\//,"../elements/");
         const contents = fs.readFileSync(file, "utf8");
         // This Regex is looking for tags that are defined by string values
         // this will work for customElements.define("local-time",s))
